@@ -1,0 +1,68 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  background-image: url(file:///C:/Users/Fubo/Desktop/Html/SheCodes-plus-week6-lesson4-challenge/media/our_neighborhood.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 127%;
+  background-attachment: fixed;
+  background-size: 32vw 60vh;
+}
+
+.weather-app{
+    max-width: 800px;
+  display: block;
+  margin: 0 auto;
+   position: relative; 
+top:100px;
+border: 1px solid #000;
+border-radius: 4px;
+color: rgb(61, 29, 245);
+}
+
+    h1, h2{font-family: 'Corinthia', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Meow Script', cursive;
+font-family: 'Noto Serif', serif; 
+position: relative;
+top: 20px;
+left:20px;
+}
+.text-muted{font-size: 22px;
+margin-bottom: 5px;}
+.feature{font-size: 25px;
+margin-bottom: 5px;}
+     p{position: relative;
+        top: 10px;
+          font-size: 50px;
+       }
+        .col-3{ padding: 50px 80px 200px 20px;
+        
+          font-size:38px ;
+        }
+               
+        .col-2{ position: relative;
+        left: 50px;
+        top:-150px;
+    font-size: 23px;}
+.city{padding: 10px 70px;
+margin: 5px 300px;
+}
+.btn-primary{position: relative;
+left: -300px;
+}
+.description{font-size: 25px;}
+.units{font-size: 15px;
+position: relative;
+top: -15px;
+}
+.GitHub-link{position: relative;
+top: -70px;
+left: -260px;
+text-align: center;}
+.celsius{color: rgb(33, 33,33);
+cursor:default;
+text-decoration: none;}
+
+.fahrenheit{text-decoration: none;
+cursor:default;}
+.form{margin-bottom: 100px;}
