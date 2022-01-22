@@ -45,6 +45,8 @@ function submitCity(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+
+
 let form = document.querySelector("#city-enter");
 form.addEventListener("submit", submitCity);
 
@@ -60,17 +62,31 @@ let days= [ "Sun",
   "Sat"];
 return days[day]; }
 
+function getForecast(coordinates){
+  let apiKey = "02a6bdfe1e53457a4cd2bb67cb4d8376";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinares.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayForecast(response){
     let forecast=response.data.daily;
     let forecastElement= document.querySelector("#forecast")
     let forecastHTML= `<div class="row">`;
-   
-    forecast.forEach(function(forecastDay){
-        forecastHTML=forecastHTML+`<div class="col-2">
+    forecast.forEach(function(forecastDay,index){if (index<4){
+        forecastHTML =
+          forecastHTML +
+          `<div class="col-2">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42"/>;
+        ${index}
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" alt="" width="42"/>;
+        <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperatures-max">${forecastDay.temp.max}</span>
+        <span class="weather-forecast-temperatures-min">${forecastDay.temp.min}</span>
+        </div>
         </div>`;
-    });
+    }});
     forecastHTML=forecastHTML+`</div>`;
     forecastElement.innerHTML=forecastHTML;
 }
@@ -91,3 +107,4 @@ function getCurrentPosition() {
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
 searchCity(Tehran);
+getForecast(response.data.coord);
