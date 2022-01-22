@@ -31,7 +31,7 @@ left:100px;
 .text-muted{font-size: 22px;
 margin-bottom: 5px;}
 .feature{font-size: 25px;
-margin-bottom: 5px;}
+margin-bottom: 0px;}
      p{position: relative;
         top: 10px;
           font-size: 50px;
@@ -53,7 +53,7 @@ left: -300px;
 position: relative;
 top: -15px;
 }
-.GitHub-link{margin-top: 20px;
+.GitHub-link{margin-top: 10px;
 text-align: center;
 text-decoration: none;
 }
@@ -63,14 +63,14 @@ text-decoration: none;
   left: 20px;
 }
 .weather-forecast{text-align: center;
- bottom: 50px;
+ margin-bottom: 50px;
  font-size: 28px;
 color: #000;}
 .weather-forecast-temperatures-min{opacity: 0.6;
 color:#F65282 ;}
 .weather-forecast-temperatures-max{color:#F65282 ;}
 
-.btn-primary{bottom: 45px;
+.btn-primary{bottom:40px;
   
   left: 650px;
 }
